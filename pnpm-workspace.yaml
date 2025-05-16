@@ -1,0 +1,10 @@
+packages:
+  - packages/bluesky/*
+  - packages/clients/*
+  - packages/definitions/*
+  - packages/identity/*
+  - packages/internal/*
+  - packages/lexicons/*
+  - packages/misc/*
+  - packages/oauth/*
+  - packages/utilities/*

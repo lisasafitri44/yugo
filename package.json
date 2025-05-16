@@ -1,0 +1,21 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"pull": "node ./scripts/pull-lexicons.js",
+		"pull:bluemoji": "node ./scripts/pull-bluemoji-lexicons.js",
+		"pull:frontpage": "node ./scripts/pull-frontpage-lexicons.js",
+		"pull:tangled": "node ./scripts/pull-tangled-lexicons.js",
+		"pull:whtwnd": "node ./scripts/pull-whtwnd-lexicons.js",
+		"fmt": "prettier --cache --write ."
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.29.3",
+		"@mary/tar": "npm:@jsr/mary__tar@^0.2.4",
+		"@mitata/counters": "^0.0.8",
+		"mitata": "^1.0.34",
+		"pkg-size-report": "workspace:^",
+		"prettier": "^3.5.3",
+		"typescript": "~5.8.3"
+	}
+}
