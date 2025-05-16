@@ -1,0 +1,39 @@
+{
+	"type": "module",
+	"name": "@atcute/cid",
+	"version": "2.2.2",
+	"description": "lightweight DASL CID codec library for AT Protocol",
+	"keywords": [
+		"atproto",
+		"dasl",
+		"cid"
+	],
+	"license": "MIT",
+	"repository": {
+		"url": "https://github.com/mary-ext/atcute",
+		"directory": "packages/utilities/cid"
+	},
+	"files": [
+		"dist/",
+		"lib/",
+		"!lib/**/*.bench.ts",
+		"!lib/**/*.test.ts"
+	],
+	"exports": {
+		".": "./dist/index.js",
+		"./cid-link": "./dist/cid-link.js"
+	},
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsc --project tsconfig.build.json",
+		"test": "bun test --coverage",
+		"prepublish": "rm -rf dist; pnpm run build"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.2.13"
+	},
+	"dependencies": {
+		"@atcute/multibase": "workspace:^",
+		"@atcute/uint8array": "workspace:^"
+	}
+}

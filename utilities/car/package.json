@@ -1,0 +1,40 @@
+{
+	"type": "module",
+	"name": "@atcute/car",
+	"version": "3.0.4",
+	"description": "lightweight DASL CAR and atproto repository decoder for AT Protocol.",
+	"keywords": [
+		"atproto",
+		"dasl",
+		"car"
+	],
+	"license": "MIT",
+	"repository": {
+		"url": "https://github.com/mary-ext/atcute",
+		"directory": "packages/utilities/car"
+	},
+	"files": [
+		"dist/",
+		"lib/",
+		"!lib/**/*.bench.ts",
+		"!lib/**/*.test.ts"
+	],
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsc --project tsconfig.build.json",
+		"test": "bun test --coverage",
+		"prepublish": "rm -rf dist; pnpm run build"
+	},
+	"devDependencies": {
+		"@atcute/multibase": "workspace:^",
+		"@types/bun": "^1.2.13"
+	},
+	"dependencies": {
+		"@atcute/cbor": "workspace:^",
+		"@atcute/cid": "workspace:^",
+		"@atcute/varint": "workspace:^"
+	}
+}
